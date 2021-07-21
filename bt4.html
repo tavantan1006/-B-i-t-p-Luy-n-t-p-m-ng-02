@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+<label for="chuoi">Nhập chuỗi : </label>
+<input type="text" id="chuoi">
+<button onclick="demTu()">Đếm</button>
+<p id="ketqua"></p>
+<p id="ketqua1"></p>
+<script>
+    function demTu() {
+        let a = document.getElementById("chuoi").value;
+        let count = 0;
+        let b = a.trim();
+        document.getElementById("ketqua").innerText = b;
+        for (const value in b) {
+            if (b[value - 1] != " " && b[value] == " ") {
+                count++
+                continue;
+            }
+        }
+        count++;
+        document.getElementById("ketqua1").innerText ="Số Từ trong chuỗi trên là : "+ count;
+    }
+</script>
+</body>
+</html>

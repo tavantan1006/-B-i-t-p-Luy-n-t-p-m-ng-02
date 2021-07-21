@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</title>
+</head>
+<body>
+<label for="chuoi">Nhập chuỗi 1 : </label>
+<input type="text" id="chuoi">
+<br><br>
+<label for="chuoi2">Nhập chuỗi 2 : </label>
+<input type="text" id="chuoi2">
+<br><br>
+<button onclick="check()">Check</button>
+<p id="ketqua"></p>
+<script>
+    function check() {
+        let a = document.getElementById("chuoi").value;
+        let b = document.getElementById("chuoi2").value;
+        if (a.localeCompare(b) == 0) {
+            document.getElementById("ketqua").innerText = "Hai chuỗi giống nhau !!";
+        } else {
+            document.getElementById("ketqua").innerText = "Hai chuỗi không giống nhau !!";
+        }
+    }
+</script>
+</body>
+</html>

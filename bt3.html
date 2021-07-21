@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng. </title>
+</head>
+<body>
+<div>
+    <p id="mang"></p>
+    <p id="mangsau"></p>
+    <p id="ketqua"></p>
+</div>
+<script>
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charactersLength = characters.length;
+    let count = 0;
+    let a = +prompt("Nhập vào số phần tử : ");
+    let arrayA = new Array(a);
+    for ( let i = 0; i < a; i++ ) {
+        arrayA[i] = characters.charAt(Math.floor(Math.random()*charactersLength));
+    }
+    document.getElementById("mang").innerHTML =arrayA;
+    //================= So Sánh ký tự có phải ký tự số không ? ======================
+    for (let i = 0; i < arrayA.length; i++) {
+        if (arrayA[i] === "0" ||arrayA[i] === '1' ||arrayA[i] === '2' ||arrayA[i] === '3' ||arrayA[i] === '4' ||arrayA[i] === '5' ||arrayA[i] === '6' ||arrayA[i] === '7' ||arrayA[i] === '8' ||arrayA[i] === '9'){
+            count++;
+        }
+    }
+    document.getElementById("ketqua").innerHTML ="Có "+count+" ký tự số trong mảng";
+</script>
+</body>
+</html>

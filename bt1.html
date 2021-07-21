@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau</title>
+</head>
+<body>
+<div>
+    <p id="mang"></p>
+    <p id="mangsau"></p>
+    <p id="ketqua"></p>
+</div>
+<script>
+    let a = +prompt("Nhập số phần tử : ");
+    let b = +prompt("Nhập số phần tử : ");
+    let text = "";
+    let arrayA = new Array();
+    for (let i = 0; i < a; i++) {
+        arrayA.push(new Array());
+        for (let j = 0; j < b; j++) {
+             arrayA[i].push(Math.floor(Math.random()*20+1));
+             text += 'Mang['+i+"]["+j+"] = "+ arrayA[i][j]+"<br>";
+        }
+    }
+    document.getElementById("ketqua").innerHTML = text;
+
+
+</script>
+</body>
+</html>
